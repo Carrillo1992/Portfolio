@@ -12,12 +12,14 @@ export class MeteorShower implements OnInit, OnDestroy {
   private ctx!: CanvasRenderingContext2D | null;
   private animationFrameId: number = 0;
   private stars: any[] = [];
-  private numStars: number = 2500;
-  private maxSpeed: number = 1;
+
+  private numStars: number = window.innerWidth<=500 ? 500 : 2500;
+  private maxSpeed: number = window.innerWidth<=500 ? 0.5 : 1;
 
   constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
+    console.log(window.innerWidth + "stars" + this.numStars);
     this.ctx = this.canvasRef.nativeElement.getContext('2d');
     this.resizeCanvas();
 
