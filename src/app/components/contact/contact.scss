@@ -1,0 +1,170 @@
+.contact-section {
+  padding: 80px 5%;
+  color: #E0E0E0; /* Cambiado de #da0d0d para que el texto general de la sección sea más legible */
+  text-align: center;
+
+  h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    color: #A064FF;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #A064FF, #FF6B6B);
+      border-radius: 2px;
+    }
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(26, 13, 59, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .mat-form-field {
+    .mat-form-field-wrapper {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      padding: 0 10px;
+    }
+    .mat-form-field-flex {
+      background-color: transparent !important;
+      border-radius: 5px;
+    }
+    .mat-form-field-infix {
+      padding: 12px 0;
+      border-top: none;
+    }
+    .mat-form-field-label {
+      color: #FFFFFF !important; /* Etiqueta a blanco */
+    }
+    .mat-input-element {
+      color: #FFFFFF; /* Texto introducido por el usuario a blanco */
+    }
+    /* Estilo para el color del placeholder (texto que aparece antes de escribir) */
+    .mat-form-field-appearance-fill .mat-form-field-label,
+    .mat-form-field-appearance-outline .mat-form-field-label,
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+      color: rgba(255, 255, 255, 0.7) !important; /* Un blanco más suave para el placeholder */
+    }
+
+    .mat-form-field-underline {
+      background-color: rgba(160, 100, 255, 0.5) !important;
+    }
+    .mat-form-field-ripple {
+      background-color: #A064FF !important;
+    }
+    &.mat-focused {
+      .mat-form-field-label {
+        color: #A064FF !important; /* Color cuando el campo está enfocado */
+      }
+      .mat-input-element {
+        color: #FFFFFF !important; /* Asegurar que siga siendo blanco al enfocar */
+      }
+    }
+    /* Para el texto de ayuda o hint */
+    .mat-form-field-hint {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+  }
+
+  textarea.mat-input-element {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .mat-error {
+    font-size: 0.8rem;
+    color: #FF6B6B;
+    margin-top: 5px;
+  }
+
+  button[type="submit"] {
+    background: linear-gradient(45deg, #FF6B6B, #A064FF);
+    color: white;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &:hover:not(:disabled) {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(45deg, #A064FF, #FF6B6B);
+    }
+
+    &:disabled {
+      background: #333;
+      cursor: not-allowed;
+      opacity: 0.7;
+      box-shadow: none;
+    }
+  }
+
+  .submission-message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .submission-message.success {
+    color: #4CAF50;
+  }
+
+  .submission-message.error {
+    color: #FF6B6B;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 5%;
+  }
+  .contact-section h3 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  .contact-section form {
+    padding: 20px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .contact-section form {
+    padding: 15px;
+  }
+  .contact-section button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

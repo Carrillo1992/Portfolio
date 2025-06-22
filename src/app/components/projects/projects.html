@@ -1,0 +1,31 @@
+<section class="projects-section">
+  <h3>Proyectos</h3>
+
+  <div class="projects-grid">
+    @for (project of projects; track $index){
+      <mat-card class="project-card">
+        <img mat-card-image [src]="project.image" alt="{{project.title}}">
+        <mat-card-content>
+          <h4>{{ project.title }}</h4>
+          <p>{{ project.shortDescription }}</p>
+          <div class="project-tech-tags">
+            @for (tech of project.technologies; track $index){
+              <span class="tech-tag">{{ tech }}</span>
+            }
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="project-actions">
+          <a mat-button [href]="project.repoLink" target="_blank">
+            <mat-icon svgIcon="github"></mat-icon> GitHub
+          </a>
+          @if (project.demoLink){
+            <a mat-button [href]="project.demoLink" target="_blank">
+              <mat-icon>launch</mat-icon> Demo
+            </a>
+          }
+        </mat-card-actions>
+      </mat-card>
+
+    }
+  </div>
+</section>

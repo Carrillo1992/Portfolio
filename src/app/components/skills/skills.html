@@ -1,0 +1,13 @@
+<section class="skills-section">
+  <h3>Skills & Tecnologías</h3>
+
+  <div class="skills-grid">
+    @for (skill of skills; track $index){
+      <div class="skill-item">
+        <mat-icon [svgIcon]="skill.icon" class="skill-icon"></mat-icon>
+        <span class="skill-name">{{ skill.name }}</span>
+      </div>
+
+    }
+  </div>
+</section>

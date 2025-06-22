@@ -1,0 +1,77 @@
+<section class="contact-section">
+  <h3>Ponte en contacto</h3>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Tu Nombre</mat-label>
+      <input matInput formControlName="name" placeholder="John Doe">
+      @if (contactForm.controls['name'].hasError('required') && contactForm.controls['name'].touched){
+        <mat-error>
+          El nombre es requerido.
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Tu Email</mat-label>
+      <input matInput formControlName="email" placeholder="john.doe@example.com">
+      @if (contactForm.controls['email'].hasError('required') && contactForm.controls['email'].touched) {
+        <mat-error>
+          El Email es requerido.
+        </mat-error>
+      }
+      @if (contactForm.controls['email'].hasError('email') && contactForm.controls['email'].touched){
+        <mat-error>
+          Porfavor introduce un email correcto
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Asunto</mat-label>
+      <input matInput formControlName="subject" placeholder="Te interesa una oportunidad de trabajo">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Tu Mensaje</mat-label>
+      <textarea matInput formControlName="message" placeholder="Me gustaria hablar contigo..."></textarea>
+      @if (contactForm.controls['message'].hasError('required') && contactForm.controls['message'].touched){
+        <mat-error>
+          El mensaje es requerido.
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <button mat-flat-button type="submit" [disabled]="submissionStatus === 'sending'">
+      @if (submissionStatus === 'idle') {
+        <ng-container>
+          Enviar mensaje <mat-icon>send</mat-icon>
+        </ng-container>
+
+      }
+      @if (submissionStatus == 'sending') {
+        <ng-container>
+          Sending...
+        </ng-container>
+
+      }
+      @if (submissionStatus === 'success'){
+        <ng-container>
+          Message Sent! <mat-icon>check_circle</mat-icon>
+        </ng-container>
+      }
+      @if (submissionStatus === 'error') {
+        <ng-container>
+          Error! Try Again <mat-icon>error</mat-icon>
+        </ng-container>
+      }
+
+    </button>
+    @if (submissionStatus === 'success') {
+      <p class="submission-message success">Gracias por tu mensaje, me pondré en contacto en lo antes posible</p>
+    }
+    @if (submissionStatus === 'error'){
+      <p class="submission-message error">Hubo un problema al enviar el mensaje, intentalo mas tarde</p>
+    }
+  </form>
+</section>

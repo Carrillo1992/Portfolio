@@ -1,0 +1,78 @@
+@import "@angular/material";
+
+.navbar {
+  background-color: rgba(26, 13, 59, 0.5);
+  color: #E0E0E0;
+  height: 64px;
+  padding: 0 5%;
+  position: fixed;
+  z-index: 10;
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #A064FF;
+    text-decoration: none;
+    padding: 0 16px;
+    letter-spacing: 0.1rem;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  nav {
+    display: flex;
+    gap: 15px;
+
+
+    a {
+      color: #E0E0E0;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: #A064FF;
+        background-color: transparent;
+      }
+
+      &.active {
+        color: #A064FF;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .hire-me-button {
+    background: linear-gradient(45deg, #FF6B6B, #6B6BFF);
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 0 20px;
+    border-radius: 5px;
+    height: 40px; // Ajusta la altura
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0 20px;
+
+      nav {
+        display: none;
+
+      }
+
+      .hire-me-button {
+        margin-left: auto;
+      }
+    }
+  }
+
