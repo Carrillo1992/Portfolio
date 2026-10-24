@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Segoe UI,Roboto,Helvetica,Arial,sans-serif"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A0D3B"/><stop offset="1" stop-color="#2D1460"/></linearGradient><linearGradient id="ac" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#A064FF"/><stop offset="1" stop-color="#FF6B6B"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#A064FF" stroke-opacity=".08"/></pattern></defs><rect width="720" height="400" fill="url(#bg)"/><rect width="720" height="400" fill="url(#grid)"/>
+<circle cx="560" cy="80" r="140" fill="#A064FF" opacity=".10"/>
+<!-- móvil -->
+<rect x="90" y="40" width="190" height="330" rx="26" fill="#120830" stroke="#A064FF" stroke-width="3"/>
+<rect x="155" y="52" width="60" height="6" rx="3" fill="#A064FF" opacity=".5"/>
+<text x="110" y="88" fill="#E0E0E0" font-size="14" font-weight="700">PRJ-001 · P-01</text>
+<text x="110" y="106" fill="#A064FF" font-size="11">X 440000 · Y 4470000</text>
+<g font-size="12" fill="#E0E0E0">
+<rect x="108" y="120" width="154" height="24" rx="6" fill="#A064FF" opacity=".18"/><text x="118" y="137">0.20 m</text><text x="228" y="137" font-weight="700">5</text>
+<rect x="108" y="150" width="154" height="24" rx="6" fill="#A064FF" opacity=".12"/><text x="118" y="167">0.40 m</text><text x="228" y="167" font-weight="700">8</text>
+<rect x="108" y="180" width="154" height="24" rx="6" fill="#A064FF" opacity=".18"/><text x="118" y="197">0.60 m</text><text x="222" y="197" font-weight="700">12</text>
+<rect x="108" y="210" width="154" height="24" rx="6" fill="#A064FF" opacity=".12"/><text x="118" y="227">0.80 m</text><text x="222" y="227" font-weight="700">17</text>
+</g>
+<g fill="#2D1460" stroke="#A064FF" stroke-opacity=".5">
+<rect x="108" y="250" width="46" height="30" rx="6"/><rect x="162" y="250" width="46" height="30" rx="6"/><rect x="216" y="250" width="46" height="30" rx="6"/>
+<rect x="108" y="288" width="46" height="30" rx="6"/><rect x="162" y="288" width="46" height="30" rx="6"/><rect x="216" y="288" width="46" height="30" rx="6" fill="#FF6B6B" fill-opacity=".25" stroke="#FF6B6B"/>
+</g>
+<g fill="#E0E0E0" font-size="14" font-weight="700" text-anchor="middle"><text x="131" y="270">1</text><text x="185" y="270">2</text><text x="239" y="270">3</text><text x="131" y="308">4</text><text x="185" y="308">5</text><text x="239" y="308" fill="#FF6B6B" font-size="11">REF</text></g>
+<rect x="108" y="330" width="154" height="24" rx="12" fill="url(#ac)"/><text x="185" y="346" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">OFFLINE · SQLite</text>
+<!-- sync -->
+<path d="M300 205 C340 160 380 160 420 190" fill="none" stroke="url(#ac)" stroke-width="3" stroke-dasharray="8 7"/>
+<path d="M412 178 L424 193 L406 197" fill="none" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round"/>
+<text x="360" y="150" fill="#A064FF" font-size="12" text-anchor="middle" font-weight="700">SYNC</text>
+<!-- informe PDF -->
+<rect x="440" y="70" width="210" height="280" rx="12" fill="#F4F0FF"/>
+<rect x="440" y="70" width="210" height="36" rx="12" fill="#A064FF"/><rect x="440" y="94" width="210" height="12" fill="#A064FF"/>
+<text x="458" y="94" fill="#fff" font-size="14" font-weight="700">Informe DPSH</text><text x="632" y="94" fill="#fff" font-size="11" text-anchor="end">PDF</text>
+<line x1="470" y1="130" x2="470" y2="320" stroke="#1A0D3B" stroke-opacity=".4"/><line x1="470" y1="130" x2="630" y2="130" stroke="#1A0D3B" stroke-opacity=".4"/>
+<g stroke="#1A0D3B" stroke-opacity=".1"><line x1="470" y1="170" x2="630" y2="170"/><line x1="470" y1="210" x2="630" y2="210"/><line x1="470" y1="250" x2="630" y2="250"/><line x1="470" y1="290" x2="630" y2="290"/></g>
+<polyline points="470,130 490,150 505,170 525,190 560,210 575,230 600,250 590,270 620,300" fill="none" stroke="#FF6B6B" stroke-width="3" stroke-linejoin="round"/>
+<text x="462" y="326" fill="#1A0D3B" font-size="9" text-anchor="end">m</text><text x="634" y="124" fill="#1A0D3B" font-size="9" text-anchor="end">golpes</text>
+</svg>
