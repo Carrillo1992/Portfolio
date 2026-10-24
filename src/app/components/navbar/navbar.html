@@ -1,12 +1,20 @@
-<mat-toolbar class="navbar" >
-  <a routerLink ="/" class="logo">DC</a>
+<mat-toolbar class="navbar" [class.menu-open]="menuOpen">
+  <a routerLink="/home" fragment="home" class="logo" (click)="closeMenu()">DC</a>
 
-  <span class="spacer"></span><nav>
-  <a mat-button routerLink="/home" fragment="home" routerLinkActive="active">Home</a>
-  <a mat-button routerLink="/about" fragment="about" routerLinkActive="active">Acerca de mí</a>
-  <a mat-button routerLink="/experience" fragment="experience" routerLinkActive="active">Experiencia</a>
-  <a mat-button routerLink="/projects" fragment="projects" routerLinkActive="active">Proyectos</a>
-  <a mat-button routerLink="/skills"  fragment="skills" routerLinkActive="active">Skills</a>
-</nav>
-  <button mat-flat-button class="hire-me-button" fragment="contact" routerLink="/contact">Contáctame</button>
+  <span class="spacer"></span>
+  <nav id="main-nav" [class.open]="menuOpen">
+    @for (link of links; track link.id){
+      <a mat-button [routerLink]="'/' + link.id" [fragment]="link.id"
+         [class.active]="activeSection === link.id"
+         [attr.aria-current]="activeSection === link.id ? 'true' : null"
+         (click)="closeMenu()">{{ link.label }}</a>
+    }
+  </nav>
+  <button mat-flat-button class="hire-me-button" fragment="contact" routerLink="/contact" (click)="closeMenu()">Contáctame</button>
+  <button mat-icon-button class="menu-toggle" (click)="toggleMenu()"
+          aria-controls="main-nav"
+          [attr.aria-expanded]="menuOpen"
+          [attr.aria-label]="menuOpen ? 'Cerrar menú' : 'Abrir menú'">
+    <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
+  </button>
 </mat-toolbar>
