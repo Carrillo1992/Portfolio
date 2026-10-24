@@ -9,6 +9,7 @@ import {About} from '../about/about';
 import {Contact} from '../contact/contact';
 import {Footer} from '../footer/footer';
 import {Navbar} from '../navbar/navbar';
+import {Experience} from '../experience/experience';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ import {Navbar} from '../navbar/navbar';
     Projects,
     Skills,
     About,
+    Experience,
     Contact,
     Footer,
   ],
@@ -49,7 +51,7 @@ export class Home{
     );
     this.matIconRegistry.addSvgIcon(
       'git',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/git.svg')
     );
     this.matIconRegistry.addSvgIcon(
       'docker',
@@ -66,6 +68,22 @@ export class Home{
     this.matIconRegistry.addSvgIcon(
       'postman',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/postman.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'kafka',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/kafka.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'redis',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/redis.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'kubernetes',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/kubernetes.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'gitlab',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/gitlab.svg')
     );
     }
 }

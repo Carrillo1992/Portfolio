@@ -22,19 +22,19 @@
       }
       @if (contactForm.controls['email'].hasError('email') && contactForm.controls['email'].touched){
         <mat-error>
-          Porfavor introduce un email correcto
+          Por favor, introduce un email válido.
         </mat-error>
       }
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Asunto</mat-label>
-      <input matInput formControlName="subject" placeholder="Te interesa una oportunidad de trabajo">
+      <input matInput formControlName="subject" placeholder="Oportunidad de trabajo">
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Tu Mensaje</mat-label>
-      <textarea matInput formControlName="message" placeholder="Me gustaria hablar contigo..."></textarea>
+      <textarea matInput formControlName="message" placeholder="Me gustaría hablar contigo..."></textarea>
       @if (contactForm.controls['message'].hasError('required') && contactForm.controls['message'].touched){
         <mat-error>
           El mensaje es requerido.
@@ -51,27 +51,27 @@
       }
       @if (submissionStatus == 'sending') {
         <ng-container>
-          Sending...
+          Enviando...
         </ng-container>
 
       }
       @if (submissionStatus === 'success'){
         <ng-container>
-          Message Sent! <mat-icon>check_circle</mat-icon>
+          ¡Mensaje enviado! <mat-icon>check_circle</mat-icon>
         </ng-container>
       }
       @if (submissionStatus === 'error') {
         <ng-container>
-          Error! Try Again <mat-icon>error</mat-icon>
+          Error, inténtalo de nuevo <mat-icon>error</mat-icon>
         </ng-container>
       }
 
     </button>
     @if (submissionStatus === 'success') {
-      <p class="submission-message success">Gracias por tu mensaje, me pondré en contacto en lo antes posible</p>
+      <p class="submission-message success">Gracias por tu mensaje, me pondré en contacto lo antes posible</p>
     }
     @if (submissionStatus === 'error'){
-      <p class="submission-message error">Hubo un problema al enviar el mensaje, intentalo mas tarde</p>
+      <p class="submission-message error">Hubo un problema al enviar el mensaje, inténtalo más tarde</p>
     }
   </form>
 </section>
