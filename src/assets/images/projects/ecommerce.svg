@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Segoe UI,Roboto,Helvetica,Arial,sans-serif"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A0D3B"/><stop offset="1" stop-color="#2D1460"/></linearGradient><linearGradient id="ac" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#A064FF"/><stop offset="1" stop-color="#FF6B6B"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#A064FF" stroke-opacity=".08"/></pattern></defs><rect width="720" height="400" fill="url(#bg)"/><rect width="720" height="400" fill="url(#grid)"/>
+<circle cx="360" cy="200" r="170" fill="#A064FF" opacity=".08"/>
+<!-- cliente -->
+<rect x="40" y="168" width="96" height="64" rx="12" fill="#120830" stroke="#A064FF" stroke-opacity=".6" stroke-width="2"/>
+<path d="M70 188 h8 l8 22 h26 l6 -16 h-36" fill="none" stroke="#E0E0E0" stroke-width="2.5" stroke-linejoin="round"/><circle cx="90" cy="216" r="3" fill="#E0E0E0"/><circle cx="108" cy="216" r="3" fill="#E0E0E0"/>
+<line x1="136" y1="200" x2="200" y2="200" stroke="url(#ac)" stroke-width="3"/>
+<!-- gateway -->
+<rect x="200" y="140" width="130" height="120" rx="16" fill="url(#ac)"/>
+<text x="265" y="190" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">API</text><text x="265" y="210" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">Gateway</text>
+<rect x="237" y="222" width="56" height="20" rx="10" fill="#1A0D3B" opacity=".5"/><text x="265" y="236" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">JWT</text>
+<!-- servicios -->
+<g stroke="#A064FF" stroke-opacity=".7" stroke-width="2" fill="none"><path d="M330 170 C370 170 380 70 420 70"/><path d="M330 190 C380 190 380 150 420 150"/><path d="M330 210 C380 210 380 250 420 250"/><path d="M330 230 C370 230 380 330 420 330"/></g>
+<g font-size="14" font-weight="700" fill="#E0E0E0">
+<rect x="420" y="46" width="150" height="48" rx="10" fill="#120830" stroke="#A064FF"/><text x="440" y="75">Usuarios</text>
+<rect x="420" y="126" width="150" height="48" rx="10" fill="#120830" stroke="#A064FF"/><text x="440" y="155">Productos</text>
+<rect x="420" y="226" width="150" height="48" rx="10" fill="#120830" stroke="#A064FF"/><text x="440" y="255">Pedidos</text>
+<rect x="420" y="306" width="150" height="48" rx="10" fill="#120830" stroke="#A064FF"/><text x="440" y="335">Carrito</text></g>
+<g fill="#A064FF"><ellipse cx="550" cy="62" rx="9" ry="4"/><rect x="541" y="62" width="18" height="16"/><ellipse cx="550" cy="78" rx="9" ry="4"/>
+<ellipse cx="550" cy="142" rx="9" ry="4"/><rect x="541" y="142" width="18" height="16"/><ellipse cx="550" cy="158" rx="9" ry="4"/>
+<ellipse cx="550" cy="242" rx="9" ry="4"/><rect x="541" y="242" width="18" height="16"/><ellipse cx="550" cy="258" rx="9" ry="4"/>
+<ellipse cx="550" cy="322" rx="9" ry="4"/><rect x="541" y="322" width="18" height="16"/><ellipse cx="550" cy="338" rx="9" ry="4"/></g>
+<!-- rabbitmq -->
+<path d="M570 250 C640 250 640 150 570 150" fill="none" stroke="#FF6B6B" stroke-width="2.5" stroke-dasharray="7 6"/>
+<path d="M582 141 L570 150 L582 159" fill="none" stroke="#FF6B6B" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="600" y="186" width="96" height="28" rx="14" fill="#FF6B6B"/><text x="648" y="205" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">RabbitMQ</text>
+</svg>
